@@ -1,0 +1,67 @@
+/* Login Form */
+.login-container {
+  max-width: 450px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+[data-theme="light"] .form-group input {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .form-group input:focus {
+  background-color: #fff;
+}
+
+.animated-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.1rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.animated-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.5);
+}

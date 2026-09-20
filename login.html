@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankita Sapra - Portfolio | Login</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/protfoliyo%20logo.png" alt="Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="about.html" class="nav-item">About Me</a></li>
+                    <li><a href="academic.html" class="nav-item">Academic Profile</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Details</a></li>
+                    <li class="mobile-only-login"><a href="login.html" class="active nav-item">Login</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="header-login-btn" style="background-color: var(--accent-hover);"><i class="fas fa-user-circle"></i> Login</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- LOGIN SECTION -->
+        <section class="section scroll-reveal" style="min-height: calc(100vh - 120px); align-items: center;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">Welcome Back</h2>
+            <div class="login-container card" style="padding: 3rem;">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="animated-btn" style="margin-top: 1rem;">
+                        <span><i class="fas fa-sign-in-alt"></i> Login securely</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ankita Sapra. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/sapra-ankita" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:26ci2110080@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

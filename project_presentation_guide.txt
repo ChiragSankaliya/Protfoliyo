@@ -1,0 +1,64 @@
+# Portfolio Website - Code Explanation Guide
+
+Welcome to the documentation for my personal portfolio website! This guide is designed to explain the inner workings of the project in a simple, easy-to-understand way, suitable for professors and fellow students. 
+
+## 1. Project Overview
+This project is a fully responsive, interactive personal portfolio website. It serves as a digital resume to showcase my academic journey, skills, and projects. 
+
+The website is built using the foundational technologies of the web:
+*   HTML5: Provides the structure and content of the pages.
+*   CSS3: Handles the visual styling, layout, and animations.
+*   JavaScript (Vanilla): Adds interactivity and logic to the website.
+
+---
+
+## 2. File Structure
+
+The project is organized into multiple files to keep the code clean and maintainable:
+*   HTML Files (index.html, about.html, contact.html, etc.): Each file represents a different page on the website.
+*   CSS Files (style.css, index.css, etc.): style.css contains global styles (like fonts and colors) shared across the whole site, while page-specific styles are kept in their own files.
+*   script.js: A single JavaScript file that controls all the interactive elements across the website.
+*   assets/ Folder: Contains images and logos used in the site.
+
+---
+
+## 3. Key Features & How They Work
+
+### A. Dark / Light Theme Toggle
+What it does: Allows users to switch the website's color scheme between a dark mode and a light mode.
+How it works (in script.js):
+1.  We use JavaScript to listen for a 'click' on the theme button.
+2.  When clicked, it toggles a special attribute (data-theme) on the main HTML document.
+3.  Our CSS files have specific rules that change the colors based on whether this attribute is set to 'dark' or 'light'.
+4.  Memory: We use localStorage to save the user's preference in their browser. If they refresh or come back later, the website remembers their choice!
+
+### B. Responsive Mobile Menu (Hamburger)
+What it does: On smaller screens (like phones), the normal navigation bar hides, and a "hamburger" icon appears. Clicking it slides out a mobile-friendly menu.
+How it works:
+1.  JavaScript listens for clicks on the hamburger icon.
+2.  It adds or removes an 'active' class to the navigation links container.
+3.  CSS handles the animation, sliding the menu into view when the 'active' class is present.
+
+### C. Scroll Reveal Animations
+What it does: As you scroll down the page, elements like text, cards, and timeline items smoothly fade and slide into view.
+How it works:
+1.  We use a modern browser feature called IntersectionObserver. 
+2.  Instead of constantly checking where the user is scrolling (which can slow down the website), the Observer simply watches specific elements.
+3.  When an element enters the screen (even just 15% of it), the observer fires an event and adds a 'visible' class to that element.
+4.  CSS transitions then take over, changing the element's opacity from 0 to 1 and sliding it into its final position.
+
+### D. Interactive Forms
+What it does: The website features a Contact form (with a live character counter) and a simulated Login page.
+How it works:
+*   Contact Form: JavaScript tracks every time the user types in the message box, counts the characters, and updates the 0/500 text in real-time. When submitted, it prevents the page from reloading, shows a success popup (alert), and clears the form.
+*   Login System: To simulate a real application, the login page checks the entered username and password against a hardcoded credential (admin / admin123). If successful, it saves the login state temporarily using sessionStorage and redirects the user to the home page.
+
+---
+
+## 4. Design & Architecture Choices
+*   No External Frameworks: The entire logic and styling were written from scratch (Vanilla JS and Custom CSS). This demonstrates a deep understanding of core web fundamentals without relying on heavy libraries like React or Bootstrap.
+*   CSS Grid & Flexbox: Modern CSS layout modules were heavily used to create complex, responsive layouts (like the Expertise Grid and the Timeline) that adapt perfectly to any screen size.
+*   Semantic HTML: Tags like <header>, <main>, <section>, and <footer> are used to ensure the website is accessible and easily understood by search engines.
+
+## 5. Conclusion
+This portfolio is more than just a website; it is a practical application of frontend development principles. It showcases clean code architecture, thoughtful UI/UX design, and the ability to create dynamic, stateful web applications from scratch.
