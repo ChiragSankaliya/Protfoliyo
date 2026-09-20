@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const savedTheme = localStorage.getItem('theme');
 
-    // Default to dark theme unless user explicitly chose light
-    if (savedTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        // icon remains fa-moon
-    } else {
+    // Default to light theme unless user explicitly chose dark
+    if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        // icon remains fa-moon
     }
 
     if (themeToggleBtn) {
