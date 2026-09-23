@@ -3,10 +3,9 @@
   max-width: 1300px;
 }
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 4rem;
-  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-image-card {
   padding: 1.5rem;
