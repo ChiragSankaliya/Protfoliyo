@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    const logoImg = document.querySelector('.logo-img');
 
     const savedTheme = localStorage.getItem('theme');
 
@@ -9,8 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+        if (logoImg) logoImg.src = 'assets/dark_mod_logo.png';
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
+        if (logoImg) logoImg.src = 'assets/protfoliyo_logo.png';
         // icon remains fa-moon
     }
 
@@ -21,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.documentElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
                 if (themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
+                if (logoImg) logoImg.src = 'assets/protfoliyo_logo.png';
             } else {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
                 if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+                if (logoImg) logoImg.src = 'assets/dark_mod_logo.png';
             }
         });
     }
